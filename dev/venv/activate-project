@@ -1,0 +1,23 @@
+# Switch to project-specific environments for Python
+#
+
+# Switch to Python 3.8
+#
+. venv38/bin/activate
+
+# Prepare the script to restore default environments
+#
+PROJECT_ROOT_=$(pwd)
+echo "deactivate" > deactivate-project
+echo "rm deactivate-project" >> deactivate-project
+echo "unalias deactivate-project" >> deactivate-project
+
+# Setup the alias to deactivate the local environments
+#
+alias deactivate-project='. '$PROJECT_ROOT_'/deactivate-project'
+unset PROJECT_ROOT_
+
+# Inform user of how to get default environment back
+#
+echo -n "Use command alias 'deactivate-project' to restore "
+echo "default Python environment"

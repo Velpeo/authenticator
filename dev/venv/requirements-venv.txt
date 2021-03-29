@@ -2,9 +2,9 @@
 #  cryptography 1.4
 #  iso8601 0.1.11
 #
-cffi==1.6.0
-cryptography==1.4
-idna==2.1
+cffi==1.14.5
+cryptography==3.0
+idna==3.0
 iso8601==0.1.11
 pyasn1==0.1.9
 pycparser==2.14

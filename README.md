@@ -211,6 +211,21 @@ This implementation requires:
 
 ## Development
 
+To setup the development environment on Debian, clone the repo from GitHub, and then `cd` in Terminal to the root of the cloned repository and do:
+
+1. `sudo apt-get install python3 python3-pip python3-venv libffi-dev -y`
+1. `pip install cryptography==3.0`
+1. `pip install iso8601==0.1.13`
+1. `pip install cffi==1.14.5`
+1. `pip install flake8`
+1. `dev/venv/make-venv`
+1. `. dev/venv/activate-project`
+1. `dev/venv/provision-venv`
+1. `dev/lint`
+1. `dev/runtests`
+1. `dev/build/make-package`
+
+
 To setup the development environment on OS X, clone the repo from GitHub, and then `cd` in Terminal to the root of the cloned repository and do:
 
 1. `dev/venv/make-venv.sh`
@@ -232,7 +247,7 @@ You can find out more about why the virtual environment is setup and managed tha
 * [Using Virtual Environments - Python I](https://www.develves.net/blogs/asd/2016-02-11-using-virtual-environments-python-1/)
 * [Using Virtual Environments - Python II](https://www.develves.net/blogs/asd/2016-02-25-using-virtual-environments-python-2/)
 
-I build the distribution using `dev/build/make-package.sh`.
+I build the distribution using `dev/build/make-package.sh` for MacOS and `dev/build/make-package` for Debian .
 
 ## License
 
