@@ -12,12 +12,12 @@ six==1.10.0
 
 # lint packages
 #
-flake8==2.5.4
-mccabe==0.4.0
+flake8==3.9.0
+mccabe==0.6.1
 pep257==0.7.0
-pep8==1.7.0
-pep8-naming==0.3.3
-pyflakes==1.0.0
+pep8==1.7.1
+pep8-naming==0.11.1
+pyflakes==2.3.1
 
 # distribution packages
 #

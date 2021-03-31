@@ -62,11 +62,11 @@ You then generate codes like so (use Ctrl-C to stop the generation)::
 System Requirements
 -------------------
 
-This requires Python 3.5 or later.
+This requires Python 3.8 or later.
 
-It has been tested on OS X 11.9.5, Windows 10, and Ubuntu 14.04. As none of those systems come with Python 3.5 out of the box, you'll need to install that yourself.
+It has been tested on OS X 11.9.5, Windows 10, and Ubuntu 14.04. As none of those systems come with Python 3.8 out of the box, you'll need to install that yourself.
 
-And I recommend setting up a Python 3.5 virtual environment in which to install ``authenticator``.
+And I recommend setting up a Python 3.8 virtual environment in which to install ``authenticator``.
 
 Installation
 ------------
@@ -206,11 +206,11 @@ Dependencies
 
 This implementation requires:
 
-* Python 3.5 or later
-* `cryptography 1.4`_
+* Python 3.8 or later
+* `cryptography 3.0`_
 * `iso8601 0.1.11`_
 
-.. _`cryptography 1.4`: https://pypi.python.org/pypi/cryptography/1.4
+.. _`cryptography 3.0`: https://pypi.python.org/pypi/cryptography/3.0
 .. _`iso8601 0.1.11`: https://pypi.python.org/pypi/iso8601/0.1.11
 
 Development

@@ -2287,7 +2287,8 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(2, rw_mock.write.call_count)
         call_args, call_kwargs = rw_mock.write.call_args_list[0]
         is_response_ok = re.compile(
-            "^012345@nom.deplume: [0-9]{6} \(expires in [0-9]{1,2} seconds\)$")
+            r"^012345@nom.deplume: [0-9]{6} "
+            r"\(expires in [0-9]{1,2} seconds\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
 
     @unittest.mock.patch('authenticator.data.ClientFile._get_key_stretches')
@@ -2326,11 +2327,13 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(4, rw_mock.write.call_count)
         call_args, call_kwargs = rw_mock.write.call_args_list[0]
         is_response_ok = re.compile(
-            "^012345@nom.deplume: [0-9]{6} \(expires in [0-9]{1,2} seconds\)$")
+            r"^012345@nom.deplume: [0-9]{6} "
+            r"\(expires in [0-9]{1,2} seconds\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
         call_args, call_kwargs = rw_mock.write.call_args_list[2]
         is_response_ok = re.compile(
-            "^donald@prisney.com: [0-9]{6} \(expires in [0-9]{1,2} seconds\)$")
+            r"^donald@prisney.com: [0-9]{6} "
+            r"\(expires in [0-9]{1,2} seconds\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
 
     @unittest.mock.patch('authenticator.data.ClientFile._get_key_stretches')
@@ -2369,7 +2372,7 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(2, rw_mock.write.call_count)
         call_args, call_kwargs = rw_mock.write.call_args_list[0]
         is_response_ok = re.compile(
-            "^mickey@prisney.com: [0-9]{6} \(for count 12\)$")
+            r"^mickey@prisney.com: [0-9]{6} \(for count 12\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
 
     @unittest.mock.patch('authenticator.data.ClientFile._get_key_stretches')
@@ -2403,7 +2406,7 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(2, rw_mock.write.call_count)
         call_args, call_kwargs = rw_mock.write.call_args_list[0]
         is_response_ok = re.compile(
-            "^mickey@prisney.com: [0-9]{6} \(for count 12\)$")
+            r"^mickey@prisney.com: [0-9]{6} \(for count 12\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
         # Again
         #
@@ -2419,7 +2422,7 @@ class CoreCLITests(unittest.TestCase):
         self.assertEqual(2, rw_mock.write.call_count)
         call_args, call_kwargs = rw_mock.write.call_args_list[0]
         is_response_ok = re.compile(
-            "^mickey@prisney.com: [0-9]{6} \(for count 13\)$")
+            r"^mickey@prisney.com: [0-9]{6} \(for count 13\)$")
         self.assertIsNotNone(is_response_ok.match(call_args[0]))
 
     # 'list' tests

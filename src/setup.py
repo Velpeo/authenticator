@@ -30,14 +30,14 @@ setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     #
-    version='1.1.3',
+    version='1.2.1',
 
     description='A HOTP/TOTP code generator for the command line.',
     long_description=long_description,
 
     # The project's main homepage.
     #
-    url='https://github.com/JeNeSuisPasDave/authenticator',
+    url='https://github.com/Velpeo/authenticator',
 
     # Author details
     #
@@ -67,7 +67,7 @@ setup(
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.8',
     ],
 
     # What does your project relate to?
@@ -89,7 +89,7 @@ setup(
     # https://packaging.python.org/en/latest/requirements.html
     #
     install_requires=[
-        'cryptography>=1.4',
+        'cryptography>=3.0',
         'iso8601>=0.1.11'
         ],
 

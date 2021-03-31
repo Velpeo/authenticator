@@ -145,20 +145,20 @@ class CoreHOTPTests(unittest.TestCase):
         #
         count = list(self.expected.keys())[0]
         self.assertEqual(0, count)
-        counter, hmac, hmacTruncated, hotpValue = self.expected[0]
+        counter, hmac, hmactruncated, hotpvalue = self.expected[0]
         self.assertEqual(bytes.fromhex("0000000000000000"), counter)
         self.assertEqual(bytes.fromhex(
             "cc93cf18508d94934c64b65d8ba7667fb7cde4b0"), hmac)
-        self.assertEqual(bytes.fromhex("4c93cf18"), hmacTruncated)
-        self.assertEqual("755224", hotpValue)
+        self.assertEqual(bytes.fromhex("4c93cf18"), hmactruncated)
+        self.assertEqual("755224", hotpvalue)
         count = list(self.expected.keys())[9]
         self.assertEqual(9, count)
-        counter, hmac, hmacTruncated, hotpValue = self.expected[9]
+        counter, hmac, hmactruncated, hotpvalue = self.expected[9]
         self.assertEqual(bytes.fromhex("0000000000000009"), counter)
         self.assertEqual(bytes.fromhex(
             "1637409809a679dc698207310c8c7fc07290d9e5"), hmac)
-        self.assertEqual(bytes.fromhex("2679dc69"), hmacTruncated)
-        self.assertEqual("520489", hotpValue)
+        self.assertEqual(bytes.fromhex("2679dc69"), hmactruncated)
+        self.assertEqual("520489", hotpvalue)
 
         # Get out
         #

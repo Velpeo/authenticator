@@ -110,8 +110,8 @@ class CoreClientFileTests(unittest.TestCase):
         }
         expected.append(ClientData(**args))
 
-        with tempfile.TemporaryDirectory() as tempDirPath:
-            filepath = tempDirPath + os.sep + "hotp.data"
+        with tempfile.TemporaryDirectory() as tempdirpath:
+            filepath = tempdirpath + os.sep + "hotp.data"
             CoreClientFileTests._cut.save(filepath, expected)
             actual = CoreClientFileTests._cut.load(filepath)
             self.assertEqual(expected, actual)
